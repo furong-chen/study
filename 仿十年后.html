@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=GBK">
+<title>仿十年后.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="none">
+<meta name="settings" content="use_css">
+<style type="text/css">
+ html, body {
+            height: 100%;
+	    overflow: auto;
+	     background:#929292;
+        }
+ 
+        body {
+            padding: 0;
+	    margin: 0;
+    }
+    div {     white-space:nowrap;   
+    } 
+#pPosition{
+    position:absolute;
+	left:30%;
+	top:26%;
+	margin:-50px 0 0 -50px;
+	overflow:hidden;
+}
+#fromPosition{
+	position:absolute;
+	left:40%;
+	top:40%;
+	margin:-50px 0 0 -50px;
+}
+ #regsiter{
+	
+         width:70px;
+	 height:27px;
+	 vertical-align:middle;
+	 text-align:center;
+         border:1px solid white;
+         -moz-border-radius: 3px;
+         -webkit-border-radius: 3px;
+	 border-radius: 3px;
+	 background:#929292;
+	
+	 
+ }
+ #regsiter:hover{
+         width:70px;
+	 height:27px;
+	 vertical-align:middle;
+	 text-align:center;
+         border:1px solid #929292;
+         -moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+	 border-radius: 4px;
+	 color:white;
+	 background-color:#00B4FF;
+	 transition-duration:1s;
+	 transition-delay:0;
+ }
+ #login{
+	 width:300px;
+	 height:40px;
+        vertical-align:middle;
+	 text-align:center;
+         border:1px solid white;
+         -moz-border-radius: 3px;
+         -webkit-border-radius: 3px;
+         border-radius: 3px;
+	 background:#afafaf;
+	 color:white;
+ 
+	 }
+	
+ .inputLogin{
+	 width:300px;
+	 height:40px;
+	 padding:0;
+	 margin:0;
+	 border:1px solid white;
+	 BACKGROUND-COLOR: transparent;
+	 background:#afafaf;
+         vertical-align:middle;
+	 text-align:center;
+         -moz-border-radius: 3px;
+         -webkit-border-radius: 3px;
+         border-radius: 3px;
+	 color:white;
+	 border-width:0;
+	 border-color:white;
+	 border-style:none;
+	 border:1px solid white;
+	 background:#afafaf;
+ }
+
+ .inputLogin:focus{
+        width:300px;
+	height:40px;
+	 padding:0;
+	 margin:0;
+	 border:1;
+	 background:white;
+	 color:balck;
+	 transition-duration:0.5s;
+	 transition-delay:0;
+	  outline:none;
+
+ }
+ .forgetPass{
+         vertical-align:middle;
+	 text-align:center;
+	 }
+  #submit{
+	 width:300px;
+	 height:38px;
+        vertical-align:middle;
+	 text-align:center;
+         border:1px solid #afafaf;
+         -moz-border-radius: 20px;
+         -webkit-border-radius: 20px;
+         border-radius: 20px;
+	 background:#afafaf;
+	 color:white;
+	 background-color:#00B4FF;
+ 
+ }
+ .saying{
+  vertical-align:middle;
+	 text-align:center;
+	 color:white;
+	 font-size:14px;
+	 line-height:6px;
+ 
+ }
+a{text-decoration:none;
+	color:white;
+	font-size:13px;
+}
+a:hover{text-decoration:underline;}
+
+::-webkit-input-placeholder{ color:white;}  
+/*Mozilla Firefox 4 to 18*/  
+:-moz-placeholder{ color:white; opacity:1;}  
+
+
+</style>
+<script type="text/javascript">
+  function attetion(msg){
+	  var username=document.getElementById("username").value;
+	  var password=document.getElementById("password").value;
+	  if(username==""||password==""){
+		  alert("输入不能为空！");
+	   
+	  }
+  
+  
+  }
+	
+
+</script>
+</head>
+<body><div>
+	<div width="250" style="margin-top:22px;">      
+		<div style="float:right" width="100" height="55">&nbsp;<a href="#" style="line-height:35px;">关于我们</a>&nbsp;</div>
+                <div style="float:right" width="150" height="30"><table class="table"><tr><td id="regsiter"><a href="#" style="text-decoration:none;font-family:微软黑体">注册</a></td></tr></table></div>
+	</div>
+    <center><div id="pPosition" style="font-size:50px;color:white;font-weight:bold">与世界分享你的追梦历程</div></center>
+
+	<div id="fromPosition">
+	<form action="login.html" method="post" >
+		<table align="center" height="100px" width="300">
+			<tr><td>
+					<input name="username" class="inputLogin" id="username" type="text"  placeholder="邮箱或手机号" onBlur="attetion(this);"/></td></tr>
+
+			<tr rowspan="1" border="0"><td >&nbsp;</td></tr>
+			<tr><td>
+					<input name="password" class="inputLogin" id="password" type="password" placeholder="密码" onBlur="attetion(this)"/>
+			</td></tr>
+			<tr rowspan="1" border="0"><td class="forgetPass">
+					<p style="font-size:14px;color:white">
+					<input name="checkbox" type="checkbox" >记住我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-size:14px;">忘记密码？</a></p>
+			</td></tr>
+
+
+			<tr><td>
+					<input id="submit" type="submit" name="submit" value="登录" />
+			</td></tr>
+		</table>
+		<br/><br/><br/><br/>
+		<center>
+<div class="saying">
+                                    <p>「十年后」是一个基于梦想的经验交流社区。</p>
+                                    <p>在这里，你可以自由的分享关于未来梦想的真实想法，</p>
+                                    <p>并探索更多有趣的梦想，结交志同道合的人。</p>
+                                </div>
+			</center>
+
+
+	
+	</div>
+</div>
+	
+	
+</body>
+</html>
+
+
