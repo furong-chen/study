@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			ul li{
+				list-style: none;
+			}
+			input{
+				width:25px;
+				height:25px;
+			}
+			strong{
+				font-size:28px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				
+				var oul=document.getElementsByTagName('ul')[0];
+				var oli=oul.getElementsByTagName('li');
+				var os=oul.getElementsByTagName('span');
+				var ast=document.getElementsByTagName('strong');
+				var afo=document.getElementsByTagName('font');
+				var len=ast.length;
+				var all=0;
+				var count=0; 
+				var sum=0;
+				var max=0;
+				var str=new Array();
+				
+				
+				for(var j=0;j<oli.length;j++){
+				   changePrice(oli[j]);   
+				      function total(){
+				     	var count=0;
+				     	var all=0;
+				  	for(var k=0;k<len;k++){
+				  		var aem=document.getElementsByTagName('em');
+				  		if(!isNaN(ast[k].innerHTML)){
+				  			count+=Number(ast[k].innerHTML);
+				  		                            }
+				  		    str.push(Number(parseFloat(afo[k].innerHTML).toFixed(2)));
+				  			all=(all*100+Number(parseFloat(afo[k].innerHTML).toFixed(2)*100))/100;
+				  
+				                        	}
+                  os[0].innerHTML=count;
+				  os[1].innerHTML=all;
+				  os[2].innerHTML=sort(str);
+				 
+				                    }
+				   
+				                              }
+				function sort(str){				   
+				  	var len=str.length;
+				    var max=0;
+				  	var max=str[0];
+				  	for(var i=0;i<len;i++){
+				  		if(max<str[i]){
+				  			max=str[i];
+				  		}
+				  		
+				  	}
+				  return max;
+				 }
+				function changePrice(ali){
+				var oin=ali.getElementsByTagName('input');
+				var oe=ali.getElementsByTagName('em')[0];
+				var of=ali.getElementsByTagName('font')[0];
+			    var ost=ali.getElementsByTagName('strong')[0];
+			    var count=Number(ost.innerHTML);
+				var price=parseFloat(oe.innerHTML*1.0);
+				
+				of.innerHTML=(count*price).toFixed(2)+'元';
+				
+				oin[0].onclick=function(){
+				  count--;
+				  if(count>=0){
+				  ost.innerHTML=count;
+				  of.innerHTML=(count*price).toFixed(2)+'元';
+				 total();
+				 
+				//alert(num);
+				}else{
+					count=0;
+					all=0;
+				}
+				  }
+				
+				oin[1].onclick=function(){
+				  count++;
+				  if(count<=10){
+				  ost.innerHTML=count;
+				   of.innerHTML=(count*price).toFixed(2)+'元';
+				   total();
+				   
+				}else{
+					count=10;
+					all=0;
+				}
+				  }
+				
+			}
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<p>我的购物车：</p>
+			<li>
+			<input type="button" value='-' id="minus" />
+			<strong>0</strong>
+			<input type="button" value='+' id='plus' />
+			单价：<em>12.5</em>元&nbsp; &nbsp; 
+			小计：<font>0</font>
+			</li>
+			<li>
+			<input type="button" value='-' id="minus" />
+			<strong>4</strong>
+			<input type="button" value='+' id='plus' />
+			单价：<em>2.8888</em>元&nbsp; &nbsp; 
+			小计：<font>0</font>
+			</li>
+			<li>
+			<input type="button" value='-' id="minus" />
+			<strong>6</strong>
+			<input type="button" value='+' id='plus' />
+			单价：<em>1.03</em>元&nbsp; &nbsp; 
+			小计：<font>0</font>
+			</li>
+			<li>
+			<input type="button" value='-' id="minus" />
+			<strong>2</strong>
+			<input type="button" value='+' id='plus' />
+			单价：<em>1.333</em>元&nbsp; &nbsp; 
+			小计：<font>0</font>
+			</li><br />
+			总计：<span></span>&nbsp;件物品<br />
+			总计：<span></span>&nbsp;元消费<br />
+			其中最贵物品消费为:<span>0</span>元
+		</ul>
+	</body>
+</html>
